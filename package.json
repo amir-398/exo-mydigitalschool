@@ -1,0 +1,25 @@
+{
+  "name": "exo-mydigitalschool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amir-398/exo-mydigitalschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amir-398/exo-mydigitalschool/issues"
+  },
+  "homepage": "https://github.com/amir-398/exo-mydigitalschool#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1",
+    "nodemon": "^3.0.1"
+  }
+}
