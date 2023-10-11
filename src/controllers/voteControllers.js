@@ -16,10 +16,25 @@ exports.listAllVotes = async (req, res) => {
 exports.createAVote = async (req, res) => {
   try {
     const music = await Music.findById(req.params.id_musique);
+    console.log(req.params.id_musique);
     if (!music) {
       return res.status(404).json({ error: "Musique non trouvée" });
     }
+    const voteValue = parseFloat(req.body.vote);
 
+    if (
+      isNaN(voteValue) ||
+      voteValue < 1 ||
+      voteValue > 5 ||
+      !Number.isInteger(voteValue)
+    ) {
+      return res
+        .status(400)
+        .json({
+          error:
+            "Le vote doit être un entier entre 1 et 5 et doit être un entier",
+        });
+    }
     const newVote = new Vote({
       ...req.body,
       musique_id: req.params.id_musique,

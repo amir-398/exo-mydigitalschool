@@ -8,7 +8,7 @@ router
   .post(voteController.createAVote);
 
 router
-  .route("/musique/votes/:id_musique/votes")
+  .route("/musique/votes/:id_musique/votes/:id_vote")
   .get(voteController.getAVote)
   .put(voteController.updateAVote)
   .delete(voteController.deleteAVote);
