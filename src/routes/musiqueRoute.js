@@ -6,7 +6,7 @@ router
   .get(musicController.listAllMusics)
   .post(musicController.createAMusic);
 router
-  .route("/:id_music")
+  .route("/:id_musique")
   .get(musicController.getAMusic)
   .put(musicController.updateAMusic)
   .delete(musicController.deleteAMusic);

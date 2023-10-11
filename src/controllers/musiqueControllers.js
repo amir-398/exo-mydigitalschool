@@ -23,7 +23,7 @@ exports.createAMusic = async (req, res) => {
 
 exports.updateAMusic = async (req, res) => {
   try {
-    const musicId = req.params.id_music;
+    const musicId = req.params.id_musique;
     const music = await Music.findByIdAndUpdate(musicId, req.body, {
       new: true,
     });
@@ -38,13 +38,13 @@ exports.updateAMusic = async (req, res) => {
 };
 
 exports.deleteAMusic = async (req, res) => {
-  const musicId = req.params.id_music;
+  const musicId = req.params.id_musique;
   try {
     const music = await Music.findByIdAndDelete(musicId);
     if (!music) {
       return res.status(404).json({ error: "Musique non trouvée" });
     }
-    res.status(204).end(); // 204 signifie "No Content" pour une suppression réussie
+    res.status(204).json("Element Supprimé");
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Erreur serveur" });
@@ -53,7 +53,7 @@ exports.deleteAMusic = async (req, res) => {
 
 exports.getAMusic = async (req, res) => {
   try {
-    const musicId = req.params.id_music;
+    const musicId = req.params.id_musique;
     const music = await Music.findById(musicId);
     if (!music) {
       return res.status(404).json({ error: "Musique non trouvée" });
