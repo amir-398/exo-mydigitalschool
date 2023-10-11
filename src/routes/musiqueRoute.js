@@ -5,10 +5,9 @@ router
   .route("/")
   .get(musicController.listAllMusics)
   .post(musicController.createAMusic);
-router
-  .route("/:id_musique")
-  .get(postController.getApost)
-  .put(postController.updateAPost)
-  .delete(postController.deleteAPost);
+// router.route("/:id_musique");
+//   .get(postController.getAMusic)
+//   .put(postController.updateAMusic)
+//   .delete(postController.deleteAMusic);
 
 module.exports = router;
