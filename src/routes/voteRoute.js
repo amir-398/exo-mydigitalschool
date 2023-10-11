@@ -12,4 +12,9 @@ router
   .get(voteController.getAVote)
   .put(voteController.updateAVote)
   .delete(voteController.deleteAVote);
+
+router
+  .route("/musique/votes/:id_musique/votes")
+  .get(voteController.calculateTotalVotes);
+
 module.exports = router;
