@@ -9,7 +9,6 @@ Pour utiliser cette application, vous devez d'abord installer Node.js et MongoDB
 1. Clonez le dépôt : `git clone https://github.com/votre-utilisateur/musique-app.git`
 2. Accédez au répertoire du projet : `cd musique-app`
 3. Installez les dépendances : `npm install`
-4. Configurez les variables d'environnement (par exemple, le port, l'URL de la base de données) dans un fichier `.env`.
 
 ## Utilisation
 
