@@ -12,8 +12,7 @@ Pour utiliser cette application, vous devez d'abord installer Node.js et MongoDB
 
 ## Utilisation
 
-Pour démarrer l'application, exécutez la commande suivante : npm start
-
+Pour démarrer l'application, exécutez la commande suivante : `npm start`
 ## Auteur
 
 - Amir MEBERBECHE
